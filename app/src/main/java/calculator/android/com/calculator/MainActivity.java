@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.btnCal:
-                intent = new Intent(this, CalculatorActivity.class);
+                intent = new Intent(this, Calculator2Activity.class);
                 startActivity(intent);
         }
     }

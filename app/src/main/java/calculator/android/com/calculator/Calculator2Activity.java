@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
+public class Calculator2Activity extends AppCompatActivity implements View.OnClickListener {
 
     TextView result;
     TextView testSideView;
@@ -45,7 +45,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculator);
+        setContentView(R.layout.activity_calculator2);
 
         // 2. 정의된 위젯변수에 xml의 위젯 id를 가져와서 담아준다.
         result = (TextView) findViewById(R.id.result);
