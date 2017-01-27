@@ -249,6 +249,7 @@ public class Calculator2Activity extends AppCompatActivity implements View.OnCli
         }
     }
     // list.remove(index)
+//    int index;
     private double evaluate(ArrayList<String> list) {
         int index;
         double one = 0;
@@ -258,6 +259,8 @@ public class Calculator2Activity extends AppCompatActivity implements View.OnCli
         // 곱셈 나눗셈 연산 먼저
         for( index = 0 ; index < list.size() ; index++) {
             String item = list.get(index);
+
+//            yunSan(item, index, "X");
             if ( item.equals("X")) {
                 one = Double.parseDouble(list.get(index-1));
                 two = Double.parseDouble(list.get(index+1));
@@ -303,5 +306,30 @@ public class Calculator2Activity extends AppCompatActivity implements View.OnCli
 
         realResult = Double.parseDouble(list.get(0));
         return realResult;
+    }
+
+    private void yunSan( String item, int index, String XX) {
+        yunSan(item, index, "X");
+        double one = 0;
+        double two = 0;
+        double sum = 0;
+        if ( item.equals("X")) {
+            one = Double.parseDouble(list.get(index-1));
+            two = Double.parseDouble(list.get(index+1));
+            sum = one*two;
+            list.set(index, sum+"");
+            list.remove(index+1);
+            list.remove(index-1);
+            index = index - 1;
+
+        } else if (item.equals("/")) {
+            one = Double.parseDouble(list.get(index-1));
+            two = Double.parseDouble(list.get(index+1));
+            sum = one/two;
+            list.set(index, sum+"");
+            list.remove(index+1);
+            list.remove(index-1);
+            index = index - 1;
+        }
     }
 }
