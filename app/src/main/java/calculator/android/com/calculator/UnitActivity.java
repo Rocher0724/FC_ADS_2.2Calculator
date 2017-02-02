@@ -20,8 +20,8 @@ public class UnitActivity extends AppCompatActivity {
     Button btnLength, btnArea, btnWeight;
     LinearLayout layout_length_vertical, layout_area_vertical, layout_weight_vertical;
     Spinner fromL, toL, fromA, toA, fromW, toW;
-    String lengthArr[] = {"meter" , "inch", "feet"};
-    String areaArr[] = {"m^2" , "hectare", "평"};
+    String lengthArr[] = {"m" , "in", "ft"};
+    String areaArr[] = {"m^2" , "ha", "평"};
     String weightArr[] = {"kg", "oz" , "t"};
 
     EditText etL,etA,etW;
@@ -117,7 +117,7 @@ public class UnitActivity extends AppCompatActivity {
     // spinner의 item을 select하면 감지하는 함수
     private void itemSelectListener(Spinner spinner, LinearLayout linearName) {
         switch(linearName.getId()) {
-            case length_layout_vertical:
+            case R.id.length_layout_vertical:
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -138,7 +138,7 @@ public class UnitActivity extends AppCompatActivity {
                     }
                 });
                 break;
-            case area_layout_vertical:
+            case R.id.area_layout_vertical:
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -160,7 +160,7 @@ public class UnitActivity extends AppCompatActivity {
                     }
                 });
                 break;
-            case weight_layout_vertical:
+            case R.id.weight_layout_vertical:
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
