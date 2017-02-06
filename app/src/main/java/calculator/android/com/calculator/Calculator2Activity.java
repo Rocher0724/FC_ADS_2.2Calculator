@@ -165,76 +165,9 @@ public class Calculator2Activity extends AppCompatActivity implements View.OnCli
                 for( String item : strarr ) {
                     list.add(item);
                 }
-//                String asdqwe = "";
-//                for ( int asd =0 ; asd < list.size() ; asd++ ){
-//                    asdqwe = asdqwe + list.get(asd);
-//                }
-//
-//                result.setText(asdqwe);
-//                String reresult = evaluate(list) + "";
-//                result.setText(reresult);
 
-
-                // 이쪽으로 끌고옴
-//                int index;
-//                double one = 0;
-//                double two = 0;
-//                double sum = 0;
-//
-//                // 곱셈 나눗셈 연산 먼저
-//                for( index = 0 ; index < list.size() ; index++) {
-//                    String item = list.get(index);
-//                    if ( item.equals("X")) {
-//                        one = Double.parseDouble(list.get(index-1));
-//                        two = Double.parseDouble(list.get(index+1));
-//                        sum = one * two;
-//                        list.set(index, sum+"");
-//                        list.remove(index-1);
-//                        list.remove(index+1);
-//                        index = index - 1;
-//
-//                    } else if (item.equals("/")) {
-//                        one = Double.parseDouble(list.get(index-1));
-//                        two = Double.parseDouble(list.get(index+1));
-//                        sum = one / two;
-//                        list.set(index, sum+"");
-//                        list.remove(index-1);
-//                        list.remove(index+1);
-//                        index = index - 1;
-//                    }
-//                }
-//
-//                // 덧셈 뺄셈 연산
-//                for( index = 0 ; index < list.size() ; index++) {
-//                    String item = list.get(index);
-//                    if ( item.equals("+")) {
-//                        one = Double.parseDouble(list.get(index-1));
-//                        two = Double.parseDouble(list.get(index+1));
-//                        sum = one + two;
-//                        list.set(index, sum+"");
-//                        list.remove(index+1);
-//                        list.remove(index-1);
-//                        index = index - 1;
-//
-//                    } else if (item.equals("-")) {
-//                        one = Double.parseDouble(list.get(index-1));
-//                        two = Double.parseDouble(list.get(index+1));
-//                        sum = one - two;
-//                        list.set(index, sum+"");
-//                        list.remove(index+1);
-//                        list.remove(index-1);
-//                        index = index - 1;
-//                    }
-//                }
-//
                 String reresult = evaluate(list) + "";
                 result.setText(reresult);
-//                realResult = Double.parseDouble(list.get(0));
-//                result.setText(realResult+"");
-                // 경계선
-//                result.setText("abc");
-
-
                 previous = realResult;
                 list.clear();
                 break;
@@ -248,8 +181,7 @@ public class Calculator2Activity extends AppCompatActivity implements View.OnCli
 
         }
     }
-    // list.remove(index)
-//    int index;
+
     private double evaluate(ArrayList<String> list) {
         int index;
         double one = 0;
